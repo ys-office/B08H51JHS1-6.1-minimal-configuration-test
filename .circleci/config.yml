@@ -24,7 +24,7 @@ jobs:
     steps:
       - checkout
       - attach_workspace:
-          at: ~/repo
+          at: .
       - run:
           name: Jest を実行
           command: npx jest --ci --maxWorkers=2
