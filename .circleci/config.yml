@@ -19,15 +19,15 @@ jobs:
           paths:
             - node_modules
 
-test_jest:
-  executor: default
-  steps:
-    - checkout
-    - attach_workspace:
-        at: .
-    - run:
-        name: Jest を実行
-        command: npx jest --ci --maxWorkers=2
+  test_jest:
+    executor: default
+    steps:
+      - checkout
+      - attach_workspace:
+          at: .
+      - run:
+          name: Jest を実行
+          command: npx jest --ci --maxWorkers=2
 
 workflows:
   version: 2
